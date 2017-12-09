@@ -1,0 +1,323 @@
+/* --- General styling --- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+	font-size: 50%;
+  background-color: gray;
+}
+body {
+	background-color: white;
+	color: black;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 1.4em; /* equiv 14px */
+	line-height: 1.5; /* adapt to your design */
+}
+/* you shall not pass */
+div, textarea, table, td, th, code, pre, samp {
+	word-wrap: break-word;
+}
+
+/* --- General styling end --- */
+
+
+/* --- Breaking page in half --- */
+
+.left {
+    float: left;
+    height: 100%;
+}
+.w50 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 950px) {
+  .w50 {
+      width: 50%;
+  }
+}
+
+.half-1{
+  background-color: #757575;
+}
+
+.half-2{
+  background-color: #616161;
+}
+
+/* --- Breaking page in half end --- */
+
+
+/* --- Tabs menu styling --- */
+
+.tabs-menu-container > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f4511e;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.tabs-menu-container > ul > li {
+    float: left;
+    flex: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .tabs-menu-container > ul {
+      flex-wrap: wrap;
+  }
+  .tabs-menu-container > ul > li {
+      float: left;
+      min-width: 100vw;
+  }
+}
+
+.tabs-menu-container > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.tabs-menu-container > ul > li a:hover {
+    background-color: #212121;
+}
+
+.secondary-tabs-menu-container > ul{
+  background-color: transparent !important;
+}
+
+
+.tabs-menu-item > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ff8f00;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.tabs-menu-item > ul > li {
+    float: left;
+    flex: 1;
+}
+
+.tabs-menu-item > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.tabs-menu-item > ul > li a:hover {
+    background-color: #212121;
+}
+
+.secondary-tabs-menu-item > ul{
+  background-color: transparent !important;
+}
+
+.tabs-menu-align-content > div > ul {
+  height: 80vh;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .tabs-menu-align-content > div > ul {
+    height: 150vh;
+  }
+}
+
+/* --- Tabs menu styling end --- */
+
+
+/* --- Colours --- */
+
+.deep-purple > li {
+  background: #5e35b1;
+}
+
+.indigo > li {
+  background: #3949ab;
+}
+
+.blue > li {
+  background: #1e88e5;
+}
+
+.light-blue > li {
+  background: #039be5;
+}
+
+.teal > li {
+  background: #00bfa5;
+}
+
+.green > li {
+  background: #00c853;
+}
+
+.lime > li {
+  background: #c0ca33;
+}
+
+.yellow > li {
+  background: #ffea00;
+}
+
+.orange > li {
+  background: #fb8c00;
+}
+
+.red > li {
+  background: #e53935;
+}
+
+/* --- Colours end --- */
+
+
+
+
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+
+
+.flex-item {
+  background: tomato;
+  padding: 2px;
+  flex: 1;
+  height: 100px;
+  margin: 10px;
+
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item-fixed-width {
+  background: tomato;
+  padding: 2px;
+  min-width: 100px;
+  max-width: 200px;
+  min-height: 100px;
+  margin: 10px;
+
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .flex-item-fixed-width {
+    background: tomato;
+    padding: 2px;
+    min-width: 10vw !important;
+    min-height: 100px;
+    margin: 10px;
+
+    line-height: 50px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+  }
+}
+
+.flex-item-vertical-1 {
+  background: tomato;
+  padding: 2px;
+  flex: 1;
+  min-height: 50px;
+  margin: 10px;
+
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item-vertical-2 {
+  background: tomato;
+  padding: 2px;
+  flex: 1;
+  min-height: 100px;
+  margin: 10px;
+
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item-vertical-3 {
+  background: tomato;
+  padding: 2px;
+  flex: 1;
+  min-height: 150px;
+  margin: 10px;
+
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item-vertical-4 {
+  background: tomato;
+  padding: 2px;
+  flex: 1;
+  min-height: 200px;
+  margin: 10px;
+
+  line-height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.baseline-top-150{
+    line-height: 150px !important;
+}

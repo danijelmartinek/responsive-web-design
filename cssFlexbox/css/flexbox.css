@@ -1,48 +1,163 @@
-.flex-container {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  border: 1px solid silver;
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
+/* ---- Directions ---- */
+
+.flex-direction-left-to-right{
+  flex-direction: row;
+}
+.flex-direction-right-to-left{
+  flex-direction: row-reverse;
+}
+.flex-direction-top-to-bottom{
+  flex-direction: column;
+}
+.flex-direction-bottom-to-top{
+  flex-direction: column-reverse;
 }
 
-.nowrap  {
-  -webkit-flex-wrap: nowrap;
+/* ---- Directions end ---- */
+
+
+/* ---- Wrap ---- */
+
+.wrap-none{
   flex-wrap: nowrap;
 }
 
-.wrap    {
-  -webkit-flex-wrap: wrap;
+.wrap{
   flex-wrap: wrap;
 }
-.wrap li {
-  background: gold;
-}
 
-.wrap-reverse         {
-  -webkit-flex-wrap: wrap-reverse;
+.wrap-reverse{
   flex-wrap: wrap-reverse;
 }
-.wrap-reverse li {
-  background: deepskyblue;
+
+/* ---- Wrap end ---- */
+
+/* ---- Wrap ---- */
+
+.wrap-none{
+  flex-wrap: nowrap;
 }
 
-.flex-item {
-  background: tomato;
-  padding: 5px;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: center;
+.wrap{
+  flex-wrap: wrap;
 }
+
+.wrap-reverse{
+  flex-wrap: wrap-reverse;
+}
+
+/* ---- Wrap end ---- */
+
+
+/* ---- Justify Content ---- */
+
+.justify-content-start{
+  justify-content: flex-start;
+}
+
+.justify-content-end{
+  justify-content: flex-end;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-space-between{
+  justify-content: space-between;
+}
+
+.justify-content-space-around{
+  justify-content: space-around;
+}
+
+.justify-content-space-evenly{
+  justify-content: space-evenly;
+}
+
+/* ---- Justify Content end ---- */
+
+
+/* ---- Align Items ---- */
+
+.align-items-start{
+  align-items: flex-start;
+}
+
+.align-items-end{
+  align-items: flex-end;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.align-items-stretch{
+  align-items: stretch;
+}
+
+.align-items-baseline{
+  align-items: baseline;
+}
+
+/* ---- Align Items end ---- */
+
+
+/* ---- Align Content ---- */
+
+.align-content-start{
+  align-content: flex-start;
+}
+
+.align-content-end{
+  align-content: flex-end;
+}
+
+.align-content-center{
+  align-content: center;
+}
+
+.align-content-stretch{
+  align-content: stretch;
+}
+
+.align-content-space-between{
+  align-content: space-between;
+}
+
+.align-content-space-around{
+  align-content: space-around;
+}
+
+/* ---- Align Content end ---- */
+
+
+
+/* ---- Orders ---- */
+
+.order-1{
+  order: 1;
+}
+.order-2{
+  order: 2;
+}
+.order-3{
+  order: 3;
+}
+.order-4{
+  order: 4;
+}
+.order-5{
+  order: 5;
+}
+.order-6{
+  order: 6;
+}
+.order-7{
+  order: 7;
+}
+.order-8{
+  order: 8;
+}
+
+/* ---- Orders end ---- */

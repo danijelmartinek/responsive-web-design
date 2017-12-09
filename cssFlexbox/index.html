@@ -10,41 +10,513 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/flexbox.css">
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+  $( "#container-tabs" ).tabs();
+  $( "#item-tabs" ).tabs();
+
+  $( "#directions" ).tabs();
+  $( "#orders" ).tabs();
+  $( "#wraps" ).tabs();
+  $( "#positions" ).tabs();
+  $( "#align-items" ).tabs();
+  $( "#align-content" ).tabs();
+} );
+</script>
+
 </head>
 <body>
 
-  <ul class="flex-container nowrap">
-    <li class="flex-item">1</li>
-    <li class="flex-item">2</li>
-    <li class="flex-item">3</li>
-    <li class="flex-item">4</li>
-    <li class="flex-item">5</li>
-    <li class="flex-item">6</li>
-    <li class="flex-item">7</li>
-    <li class="flex-item">8</li>
-  </ul>
+<div id="content">
+  <div class="left w50 half-1">
 
-  <ul class="flex-container wrap">
-    <li class="flex-item">1</li>
-    <li class="flex-item">2</li>
-    <li class="flex-item">3</li>
-    <li class="flex-item">4</li>
-    <li class="flex-item">5</li>
-    <li class="flex-item">6</li>
-    <li class="flex-item">7</li>
-    <li class="flex-item">8</li>
-  </ul>
+    <!--- HALF 1 --->
 
-  <ul class="flex-container wrap-reverse">
-    <li class="flex-item">1</li>
-    <li class="flex-item">2</li>
-    <li class="flex-item">3</li>
-    <li class="flex-item">4</li>
-    <li class="flex-item">5</li>
-    <li class="flex-item">6</li>
-    <li class="flex-item">7</li>
-    <li class="flex-item">8</li>
-  </ul>
+    <div id="container-tabs" class="tabs-menu-container">
+      <ul>
+        <li><a href="#container-tabs-1">Smjer (Direction)</a></li>
+        <li><a href="#container-tabs-2">Omotanje (Wrap)</a></li>
+        <li><a href="#container-tabs-3">Pozicija (Justify Content)</a></li>
+        <li><a href="#container-tabs-4">Pozicija vertikalno (Align Items)</a></li>
+        <li><a href="#container-tabs-5">Pozicija sadržaja (Align Content)</a></li>
+      </ul>
+      <hr>
+
+        <div id="container-tabs-1">
+          <h3>Smjer</h3>
+          <hr>
+          <div id="directions" class="tabs-menu-container secondary-tabs-menu-container">
+            <ul>
+              <li><a href="#directions-1">Lijevo prema desnom</a></li>
+              <li><a href="#directions-2">Desno prema lijevom</a></li>
+              <li><a href="#directions-3">Vrh prema dnu</a></li>
+              <li><a href="#directions-4">Dno prema vrhu</a></li>
+            </ul>
+            <hr>
+
+            <div id="directions-1">
+              <ul class="flex-container flex-direction-left-to-right blue">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+                <li class="flex-item">4</li>
+                <li class="flex-item">5</li>
+                <li class="flex-item">6</li>
+                <li class="flex-item">7</li>
+                <li class="flex-item">8</li>
+              </ul>
+            </div>
+            <div id="directions-2">
+              <ul class="flex-container flex-direction-right-to-left red">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+                <li class="flex-item">4</li>
+                <li class="flex-item">5</li>
+                <li class="flex-item">6</li>
+                <li class="flex-item">7</li>
+                <li class="flex-item">8</li>
+              </ul>
+            </div>
+            <div id="directions-3">
+              <ul class="flex-container flex-direction-top-to-bottom deep-purple">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+              </ul>
+            </div>
+            <div id="directions-4">
+              <ul class="flex-container flex-direction-bottom-to-top orange">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="container-tabs-2">
+          <h3>Omotanje</h3>
+          <hr>
+          <div id="wraps" class="tabs-menu-container secondary-tabs-menu-container">
+            <ul>
+              <li><a href="#wraps-1">Bez omota</a></li>
+              <li><a href="#wraps-2">Omot</a></li>
+              <li><a href="#wraps-3">Omot suprotno</a></li>
+            </ul>
+            <hr>
+
+            <div id="wraps-1">
+              <ul class="flex-container wrap-none indigo">
+                <li class="flex-item">1</li>
+                <li class="flex-item">2</li>
+                <li class="flex-item">3</li>
+                <li class="flex-item">4</li>
+                <li class="flex-item">5</li>
+                <li class="flex-item">6</li>
+                <li class="flex-item">7</li>
+                <li class="flex-item">8</li>
+              </ul>
+            </div>
+            <div id="wraps-2">
+              <ul class="flex-container wrap light-blue">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+              </ul>
+            </div>
+            <div id="wraps-3">
+              <ul class="flex-container wrap-reverse teal">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="container-tabs-3">
+          <h3>Pozicija elemenata</h3>
+          <hr>
+          <div id="positions" class="tabs-menu-container secondary-tabs-menu-container">
+            <ul>
+              <li><a href="#positions-1">Početak</a></li>
+              <li><a href="#positions-2">Kraj</a></li>
+              <li><a href="#positions-3">Centrirano</a></li>
+              <li><a href="#positions-4">Razmak između</a></li>
+              <li><a href="#positions-5">Razmak na rubovima</a></li>
+              <li><a href="#positions-6">Jednaki razmaci</a></li>
+            </ul>
+            <hr>
+
+            <div id="positions-1">
+              <ul class="flex-container justify-content-start light-blue">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+              </ul>
+            </div>
+            <div id="positions-2">
+              <ul class="flex-container justify-content-end deep-purple">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+              </ul>
+            </div>
+            <div id="positions-3">
+              <ul class="flex-container justify-content-center red">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+              </ul>
+            </div>
+            <div id="positions-4">
+              <ul class="flex-container justify-content-space-between yellow">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+              </ul>
+            </div>
+            <div id="positions-5">
+              <ul class="flex-container justify-content-space-around green">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+              </ul>
+            </div>
+            <div id="positions-6">
+              <ul class="flex-container justify-content-space-evenly orange">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="container-tabs-4">
+          <h3>Vertikalno pozicioniranje elemenata</h3>
+          <hr>
+          <div id="align-items" class="tabs-menu-container secondary-tabs-menu-container">
+            <ul>
+              <li><a href="#align-items-1">Vrh</a></li>
+              <li><a href="#align-items-2">Dno</a></li>
+              <li><a href="#align-items-3">Centrirano</a></li>
+              <li><a href="#align-items-4">Razvučeno</a></li>
+              <li><a href="#align-items-5">Po osnovici</a></li>
+            </ul>
+            <hr>
+
+            <div id="align-items-1">
+              <ul class="flex-container align-items-start tial">
+                <li class="flex-item-vertical-1">1</li>
+                <li class="flex-item-vertical-2">2</li>
+                <li class="flex-item-vertical-3 baseline-top-150">3</li>
+                <li class="flex-item-vertical-4 baseline-top-150">4</li>
+                <li class="flex-item-vertical-3 baseline-top-150">5</li>
+                <li class="flex-item-vertical-2">6</li>
+                <li class="flex-item-vertical-1">7</li>
+              </ul>
+            </div>
+            <div id="align-items-2">
+              <ul class="flex-container align-items-end orange">
+                <li class="flex-item-vertical-1">1</li>
+                <li class="flex-item-vertical-2">2</li>
+                <li class="flex-item-vertical-3 baseline-top-150">3</li>
+                <li class="flex-item-vertical-4 baseline-top-150">4</li>
+                <li class="flex-item-vertical-3 baseline-top-150">5</li>
+                <li class="flex-item-vertical-2">6</li>
+                <li class="flex-item-vertical-1">7</li>
+              </ul>
+            </div>
+            <div id="align-items-3">
+              <ul class="flex-container align-items-center red">
+                <li class="flex-item-vertical-1">1</li>
+                <li class="flex-item-vertical-2">2</li>
+                <li class="flex-item-vertical-3 baseline-top-150">3</li>
+                <li class="flex-item-vertical-4 baseline-top-150">4</li>
+                <li class="flex-item-vertical-3 baseline-top-150">5</li>
+                <li class="flex-item-vertical-2">6</li>
+                <li class="flex-item-vertical-1">7</li>
+              </ul>
+            </div>
+            <div id="align-items-4">
+              <ul class="flex-container align-items-stretch indigo">
+                <li class="flex-item-vertical-1">1</li>
+                <li class="flex-item-vertical-2">2</li>
+                <li class="flex-item-vertical-3 baseline-top-150">3</li>
+                <li class="flex-item-vertical-4 baseline-top-150">4</li>
+                <li class="flex-item-vertical-3 baseline-top-150">5</li>
+                <li class="flex-item-vertical-2">6</li>
+                <li class="flex-item-vertical-1">7</li>
+              </ul>
+            </div>
+            <div id="align-items-5">
+              <ul class="flex-container align-items-baseline green">
+                <li class="flex-item-vertical-1">1</li>
+                <li class="flex-item-vertical-2">2</li>
+                <li class="flex-item-vertical-3 baseline-top-150">3</li>
+                <li class="flex-item-vertical-4 baseline-top-150">4</li>
+                <li class="flex-item-vertical-3 baseline-top-150">5</li>
+                <li class="flex-item-vertical-2">6</li>
+                <li class="flex-item-vertical-1">7</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="container-tabs-5">
+          <h3>Vertikalno pozicioniranje sadržaja</h3>
+          <hr>
+          <div id="align-content" class="tabs-menu-container secondary-tabs-menu-container tabs-menu-align-content">
+            <ul>
+              <li><a href="#align-content-1">Vrh</a></li>
+              <li><a href="#align-content-2">Dno</a></li>
+              <li><a href="#align-content-3">Centrirano</a></li>
+              <li><a href="#align-content-4">Razvučeno</a></li>
+              <li><a href="#align-content-5">Razmak između redaka</a></li>
+              <li><a href="#align-content-6">Jednaki razmak</a></li>
+            </ul>
+            <hr>
+
+            <div id="align-content-1">
+              <ul class="flex-container wrap align-content-start blue">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+                <li class="flex-item-fixed-width">9</li>
+                <li class="flex-item-fixed-width">10</li>
+                <li class="flex-item-fixed-width">11</li>
+                <li class="flex-item-fixed-width">12</li>
+                <li class="flex-item-fixed-width">13</li>
+                <li class="flex-item-fixed-width">14</li>
+                <li class="flex-item-fixed-width">15</li>
+                <li class="flex-item-fixed-width">16</li>
+              </ul>
+            </div>
+            <div id="align-content-2">
+              <ul class="flex-container wrap align-content-end orange">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+                <li class="flex-item-fixed-width">9</li>
+                <li class="flex-item-fixed-width">10</li>
+                <li class="flex-item-fixed-width">11</li>
+                <li class="flex-item-fixed-width">12</li>
+                <li class="flex-item-fixed-width">13</li>
+                <li class="flex-item-fixed-width">14</li>
+                <li class="flex-item-fixed-width">15</li>
+                <li class="flex-item-fixed-width">16</li>
+              </ul>
+            </div>
+            <div id="align-content-3">
+              <ul class="flex-container wrap align-content-center red">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+                <li class="flex-item-fixed-width">9</li>
+                <li class="flex-item-fixed-width">10</li>
+                <li class="flex-item-fixed-width">11</li>
+                <li class="flex-item-fixed-width">12</li>
+                <li class="flex-item-fixed-width">13</li>
+                <li class="flex-item-fixed-width">14</li>
+                <li class="flex-item-fixed-width">15</li>
+                <li class="flex-item-fixed-width">16</li>
+              </ul>
+            </div>
+            <div id="align-content-4">
+              <ul class="flex-container wrap align-content-stretch indigo">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+                <li class="flex-item-fixed-width">9</li>
+                <li class="flex-item-fixed-width">10</li>
+                <li class="flex-item-fixed-width">11</li>
+                <li class="flex-item-fixed-width">12</li>
+                <li class="flex-item-fixed-width">13</li>
+                <li class="flex-item-fixed-width">14</li>
+                <li class="flex-item-fixed-width">15</li>
+                <li class="flex-item-fixed-width">16</li>
+              </ul>
+            </div>
+            <div id="align-content-5">
+              <ul class="flex-container wrap align-content-space-between green">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+                <li class="flex-item-fixed-width">9</li>
+                <li class="flex-item-fixed-width">10</li>
+                <li class="flex-item-fixed-width">11</li>
+                <li class="flex-item-fixed-width">12</li>
+                <li class="flex-item-fixed-width">13</li>
+                <li class="flex-item-fixed-width">14</li>
+                <li class="flex-item-fixed-width">15</li>
+                <li class="flex-item-fixed-width">16</li>
+              </ul>
+            </div>
+            <div id="align-content-6">
+              <ul class="flex-container wrap align-content-space-around tial">
+                <li class="flex-item-fixed-width">1</li>
+                <li class="flex-item-fixed-width">2</li>
+                <li class="flex-item-fixed-width">3</li>
+                <li class="flex-item-fixed-width">4</li>
+                <li class="flex-item-fixed-width">5</li>
+                <li class="flex-item-fixed-width">6</li>
+                <li class="flex-item-fixed-width">7</li>
+                <li class="flex-item-fixed-width">8</li>
+                <li class="flex-item-fixed-width">9</li>
+                <li class="flex-item-fixed-width">10</li>
+                <li class="flex-item-fixed-width">11</li>
+                <li class="flex-item-fixed-width">12</li>
+                <li class="flex-item-fixed-width">13</li>
+                <li class="flex-item-fixed-width">14</li>
+                <li class="flex-item-fixed-width">15</li>
+                <li class="flex-item-fixed-width">16</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+<!--- HALF 1 END --->
+
+<!--- HALF 2 --->
+
+  <div class="left w50 half-2">
+
+    <div id="item-tabs" class="tabs-menu-item">
+      <ul>
+        <li><a href="#item-tabs-1">Raspored (Order)</a></li>
+        <li><a href="#item-tabs-2">nekaj</a></li>
+        <li><a href="#item-tabs-3">Vrh prema dnu</a></li>
+        <li><a href="#item-tabs-4">Dno prema vrhu</a></li>
+      </ul>
+      <hr>
+
+
+        <div id="item-tabs-1">
+          <h3>Raspored</h3>
+          <hr>
+          <div id="orders" class="tabs-menu-item secondary-tabs-menu-item">
+            <ul>
+              <li><a href="#orders-1">| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |</a></li>
+              <li><a href="#orders-2">| 5 | 1 | 3 | 8 | 7 | 4 | 2 | 6 |</a></li>
+              <li><a href="#orders-3">| 6 | 2 | 7 | 4 | 1 | 5 | 8 | 3 |</a></li>
+              <li><a href="#orders-4">| 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |</a></li>
+            </ul>
+            <hr>
+
+            <div id="orders-1">
+              <ul class="flex-container">
+                <li class="flex-item order-1">1</li>
+                <li class="flex-item order-2">2</li>
+                <li class="flex-item order-3">3</li>
+                <li class="flex-item order-4">4</li>
+                <li class="flex-item order-5">5</li>
+                <li class="flex-item order-6">6</li>
+                <li class="flex-item order-7">7</li>
+                <li class="flex-item order-8">8</li>
+              </ul>
+            </div>
+            <div id="orders-2">
+              <ul class="flex-container">
+                <li class="flex-item order-2">1</li>
+                <li class="flex-item order-7">2</li>
+                <li class="flex-item order-3">3</li>
+                <li class="flex-item order-6">4</li>
+                <li class="flex-item order-1">5</li>
+                <li class="flex-item order-8">6</li>
+                <li class="flex-item order-5">7</li>
+                <li class="flex-item order-4">8</li>
+              </ul>
+            </div>
+            <div id="orders-3">
+              <ul class="flex-container">
+                <li class="flex-item order-5">1</li>
+                <li class="flex-item order-2">2</li>
+                <li class="flex-item order-8">3</li>
+                <li class="flex-item order-4">4</li>
+                <li class="flex-item order-6">5</li>
+                <li class="flex-item order-1">6</li>
+                <li class="flex-item order-3">7</li>
+                <li class="flex-item order-7">8</li>
+              </ul>
+            </div>
+            <div id="orders-4">
+              <ul class="flex-container">
+                <li class="flex-item order-8">1</li>
+                <li class="flex-item order-7">2</li>
+                <li class="flex-item order-6">3</li>
+                <li class="flex-item order-5">4</li>
+                <li class="flex-item order-4">5</li>
+                <li class="flex-item order-3">6</li>
+                <li class="flex-item order-2">7</li>
+                <li class="flex-item order-1">8</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+    <!--- HALF 1 END --->
+
+  </div>
+</div>
+
+
+
+
 
 </body>
 </html>
