@@ -1,7 +1,7 @@
 
 # Responsive Web Design
 
-An article about responsive CSS design of website with examples.
+> An article about responsive CSS design of website with examples.
 
 <img src="/img/responsive-web.png" alt="responsive-web-design" width="100%">
 
