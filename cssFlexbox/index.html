@@ -18,11 +18,14 @@ $( function() {
   $( "#item-tabs" ).tabs();
 
   $( "#directions" ).tabs();
-  $( "#orders" ).tabs();
   $( "#wraps" ).tabs();
   $( "#positions" ).tabs();
   $( "#align-items" ).tabs();
   $( "#align-content" ).tabs();
+
+  $( "#orders" ).tabs();
+  $( "#grows" ).tabs();
+  $( "#align-selfs" ).tabs();
 } );
 </script>
 
@@ -32,7 +35,7 @@ $( function() {
 <div id="content">
   <div class="left w50 half-1">
 
-    <!--- HALF 1 --->
+    <!--- HALF 1 -->
 
     <div id="container-tabs" class="tabs-menu-container">
       <ul>
@@ -46,6 +49,12 @@ $( function() {
 
         <div id="container-tabs-1">
           <h3>Smjer</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .container {
+            flex-direction: row | row-reverse | column | column-reverse;
+          }
+          </code></pre>
+            
           <hr>
           <div id="directions" class="tabs-menu-container secondary-tabs-menu-container">
             <ul>
@@ -109,6 +118,12 @@ $( function() {
 
         <div id="container-tabs-2">
           <h3>Omotanje</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .container {
+            flex-wrap: nowrap | wrap | wrap-reverse;
+          }
+          </code></pre>
+
           <hr>
           <div id="wraps" class="tabs-menu-container secondary-tabs-menu-container">
             <ul>
@@ -159,6 +174,12 @@ $( function() {
 
         <div id="container-tabs-3">
           <h3>Pozicija elemenata</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .container {
+            justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+          }
+          </code></pre>
+
           <hr>
           <div id="positions" class="tabs-menu-container secondary-tabs-menu-container">
             <ul>
@@ -218,6 +239,12 @@ $( function() {
 
         <div id="container-tabs-4">
           <h3>Vertikalno pozicioniranje elemenata</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .container {
+            align-items: flex-start | flex-end | center | stretch | baseline;
+          }
+          </code></pre>
+
           <hr>
           <div id="align-items" class="tabs-menu-container secondary-tabs-menu-container">
             <ul>
@@ -289,6 +316,12 @@ $( function() {
 
         <div id="container-tabs-5">
           <h3>Vertikalno pozicioniranje sadržaja</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .container {
+            align-content: flex-start | flex-end | center | stretch | space-between | space-around;
+          }
+          </code></pre>
+
           <hr>
           <div id="align-content" class="tabs-menu-container secondary-tabs-menu-container tabs-menu-align-content">
             <ul>
@@ -428,24 +461,33 @@ $( function() {
 
   </div>
 
-<!--- HALF 1 END --->
+<!--- HALF 1 END -->
 
-<!--- HALF 2 --->
+
+
+
+
+<!--- HALF 2 -->
 
   <div class="left w50 half-2">
 
     <div id="item-tabs" class="tabs-menu-item">
       <ul>
         <li><a href="#item-tabs-1">Raspored (Order)</a></li>
-        <li><a href="#item-tabs-2">nekaj</a></li>
-        <li><a href="#item-tabs-3">Vrh prema dnu</a></li>
-        <li><a href="#item-tabs-4">Dno prema vrhu</a></li>
+        <li><a href="#item-tabs-2">Povećanje (Grow)</a></li>
+        <li><a href="#item-tabs-3">Usklađivanje (Align Self)</a></li>
       </ul>
       <hr>
 
 
         <div id="item-tabs-1">
           <h3>Raspored</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .item {
+            order: \broj\; /* osnovno je 0 */
+          }
+          </code></pre>
+
           <hr>
           <div id="orders" class="tabs-menu-item secondary-tabs-menu-item">
             <ul>
@@ -458,64 +500,191 @@ $( function() {
 
             <div id="orders-1">
               <ul class="flex-container">
-                <li class="flex-item order-1">1</li>
-                <li class="flex-item order-2">2</li>
-                <li class="flex-item order-3">3</li>
-                <li class="flex-item order-4">4</li>
-                <li class="flex-item order-5">5</li>
-                <li class="flex-item order-6">6</li>
-                <li class="flex-item order-7">7</li>
-                <li class="flex-item order-8">8</li>
+                <li class="flex-item order-1 i-yellow">1</li>
+                <li class="flex-item order-2 i-green">2</li>
+                <li class="flex-item order-3 i-indigo">3</li>
+                <li class="flex-item order-4 i-orange">4</li>
+                <li class="flex-item order-5 i-red">5</li>
+                <li class="flex-item order-6 i-lime">6</li>
+                <li class="flex-item order-7 i-deep-purple">7</li>
+                <li class="flex-item order-8 i-teal">8</li>
               </ul>
             </div>
             <div id="orders-2">
               <ul class="flex-container">
-                <li class="flex-item order-2">1</li>
-                <li class="flex-item order-7">2</li>
-                <li class="flex-item order-3">3</li>
-                <li class="flex-item order-6">4</li>
-                <li class="flex-item order-1">5</li>
-                <li class="flex-item order-8">6</li>
-                <li class="flex-item order-5">7</li>
-                <li class="flex-item order-4">8</li>
+                <li class="flex-item order-2 i-yellow">1</li>
+                <li class="flex-item order-7 i-green">2</li>
+                <li class="flex-item order-3 i-indigo">3</li>
+                <li class="flex-item order-6 i-orange">4</li>
+                <li class="flex-item order-1 i-red">5</li>
+                <li class="flex-item order-8 i-lime">6</li>
+                <li class="flex-item order-5 i-deep-purple">7</li>
+                <li class="flex-item order-4 i-teal">8</li>
               </ul>
             </div>
             <div id="orders-3">
               <ul class="flex-container">
-                <li class="flex-item order-5">1</li>
-                <li class="flex-item order-2">2</li>
-                <li class="flex-item order-8">3</li>
-                <li class="flex-item order-4">4</li>
-                <li class="flex-item order-6">5</li>
-                <li class="flex-item order-1">6</li>
-                <li class="flex-item order-3">7</li>
-                <li class="flex-item order-7">8</li>
+                <li class="flex-item order-5 i-yellow">1</li>
+                <li class="flex-item order-2 i-green">2</li>
+                <li class="flex-item order-8 i-indigo">3</li>
+                <li class="flex-item order-4 i-orange">4</li>
+                <li class="flex-item order-6 i-red">5</li>
+                <li class="flex-item order-1 i-lime">6</li>
+                <li class="flex-item order-3 i-deep-purple">7</li>
+                <li class="flex-item order-7 i-teal">8</li>
               </ul>
             </div>
             <div id="orders-4">
               <ul class="flex-container">
-                <li class="flex-item order-8">1</li>
-                <li class="flex-item order-7">2</li>
-                <li class="flex-item order-6">3</li>
-                <li class="flex-item order-5">4</li>
-                <li class="flex-item order-4">5</li>
-                <li class="flex-item order-3">6</li>
-                <li class="flex-item order-2">7</li>
-                <li class="flex-item order-1">8</li>
+                <li class="flex-item order-8 i-yellow">1</li>
+                <li class="flex-item order-7 i-green">2</li>
+                <li class="flex-item order-6 i-indigo">3</li>
+                <li class="flex-item order-5 i-orange">4</li>
+                <li class="flex-item order-4 i-red">5</li>
+                <li class="flex-item order-3 i-lime">6</li>
+                <li class="flex-item order-2 i-deep-purple">7</li>
+                <li class="flex-item order-1 i-teal">8</li>
               </ul>
             </div>
           </div>
         </div>
 
+        <div id="item-tabs-2">
+          <h3>Povećanje</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .item {
+            flex-grow: \broj\; /* osnovno je 0 */
+          }
+          </code></pre>
+
+          <hr>
+          <div id="grows" class="tabs-menu-item secondary-tabs-menu-item">
+            <ul>
+              <li><a href="#grows-1">| 1 | 1 | 1 | 1 |</a></li>
+              <li><a href="#grows-2">| 1 | 2 | 1 | 1 |</a></li>
+              <li><a href="#grows-3">| 2 | 1 | 3 | 1 |</a></li>
+              <li><a href="#grows-4">| 1 | 1 | 1 | 5 |</a></li>
+            </ul>
+            <hr>
+
+            <div id="grows-1">
+              <ul class="flex-container">
+                <li class="flex-item grow-1 i-green">1</li>
+                <li class="flex-item grow-1 i-teal">1</li>
+                <li class="flex-item grow-1 i-deep-purple">1</li>
+                <li class="flex-item grow-1 i-lime">1</li>
+              </ul>
+            </div>
+            <div id="grows-2">
+              <ul class="flex-container">
+                <li class="flex-item grow-1 i-green">1</li>
+                <li class="flex-item grow-2 i-teal">2</li>
+                <li class="flex-item grow-1 i-deep-purple">1</li>
+                <li class="flex-item grow-1 i-lime">1</li>
+              </ul>
+            </div>
+            <div id="grows-3">
+              <ul class="flex-container">
+                <li class="flex-item grow-2 i-green">2</li>
+                <li class="flex-item grow-1 i-teal">1</li>
+                <li class="flex-item grow-3 i-deep-purple">3</li>
+                <li class="flex-item grow-1 i-lime">1</li>
+              </ul>
+            </div>
+            <div id="grows-4">
+              <ul class="flex-container">
+                <li class="flex-item grow-1 i-green">1</li>
+                <li class="flex-item grow-1 i-teal">1</li>
+                <li class="flex-item grow-1 i-deep-purple">1</li>
+                <li class="flex-item grow-5 i-lime">5</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div id="item-tabs-3">
+          <h3>Pozicioniranje elementa</h3>
+          <pre title="CSS" data-codetype ="CSS"><code class="language-css">
+          .item {
+            align-self: flex-start | center | flex-end | stretch | baseline;
+          }
+          </code></pre>
+
+          <hr>
+          <div id="align-selfs" class="tabs-menu-item secondary-tabs-menu-item tabs-menu-align-content">
+            <ul>
+              <li><a href="#align-selfs-1">Početak</a></li>
+              <li><a href="#align-selfs-2">Centar</a></li>
+              <li><a href="#align-selfs-3">Kraj</a></li>
+              <li><a href="#align-selfs-4">Razvučeno</a></li>
+              <li><a href="#align-selfs-5">Po glavnoj liniji</a></li>
+            </ul>
+            <hr>
+
+            <div id="align-selfs-1">
+              <ul class="flex-container">
+                <li class="flex-item flex-item-fixed-height align-self-1 i-teal">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-green">1</li>
+                <li class="flex-item align-self-start i-blue">start</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-lime">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-deep-purple">1</li>
+              </ul>
+            </div>
+            <div id="align-selfs-2">
+              <ul class="flex-container">
+                <li class="flex-item flex-item-fixed-height align-self-1 i-teal">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-green">1</li>
+                <li class="flex-item align-self-center i-blue">center</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-lime">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-deep-purple">1</li>
+              </ul>
+            </div>
+            <div id="align-selfs-3">
+              <ul class="flex-container">
+                <li class="flex-item flex-item-fixed-height align-self-1 i-teal">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-green">1</li>
+                <li class="flex-item align-self-end i-blue">end</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-lime">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-deep-purple">1</li>
+              </ul>
+            </div>
+            <div id="align-selfs-4">
+              <ul class="flex-container">
+                <li class="flex-item flex-item-fixed-height align-self-1 i-teal">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-green">1</li>
+                <li class="flex-item align-self-stretch i-blue">stretch</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-lime">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-deep-purple">1</li>
+              </ul>
+            </div>
+            <div id="align-selfs-5">
+              <ul class="flex-container">
+                <li class="flex-item flex-item-fixed-height align-self-1 i-teal">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-green">1</li>
+                <li class="flex-item align-self-baseline flex-item-fixed-height i-blue">baseline</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-lime">1</li>
+                <li class="flex-item flex-item-fixed-height align-self-1 i-deep-purple">1</li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+
     </div>
 
-    <!--- HALF 1 END --->
+    <!--- HALF 1 END -->
 
   </div>
 </div>
 
 
-
+<script>
+  //Line Number
+$('pre').attr('class', 'line-numbers');
+Prism.hooks.add("after-highlight",function(e){var t=e.element.parentNode;if(!t||!/pre/i.test(t.nodeName)||t.className.indexOf("line-numbers")===-1){return}var n=1+e.code.split("\n").length;var r;lines=new Array(n);lines=lines.join("<span></span>");r=document.createElement("span");r.className="line-numbers-rows";r.innerHTML=lines;if(t.hasAttribute("data-start")){t.style.counterReset="linenumber "+(parseInt(t.getAttribute("data-start"),10)-1)}e.element.appendChild(r)})
+</script>
 
 
 </body>

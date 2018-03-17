@@ -14,10 +14,13 @@
   background-color: #d50000;
   color: #ffffff;
   border: 5px solid #ffffff;
+  font-size: 2em;
 }
 
 /* ---- Footer ---- */
 .footer-distributed {
+  position: absolute;
+  bottom: 0;
   background-color: #292c2f;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
