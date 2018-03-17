@@ -16,4 +16,4 @@ Small **flexbox playground** included ( _./cssFlexbox/index.html_ ).
 **Format:** .pdf
 
 ----------
-**Danijel Martinek**
+**© Danijel Martinek**
